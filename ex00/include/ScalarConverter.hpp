@@ -6,7 +6,7 @@
 /*   By: ldepenne <ldepenne@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 11:53:54 by ldepenne          #+#    #+#             */
-/*   Updated: 2026/10/14 16:47:23 by ldepenne         ###   ########.fr       */
+/*   Updated: 2026/10/15 18:59:31 by ldepenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ class	ScalarConverter {
 bool	isChar(const std::string& s);
 bool	isNan(const std::string& s);
 bool	isInf(const std::string& s);
-bool	isValidNnumber(const std::string& s);
+bool	isValidNumber(const std::string& s);
 
 /*aff*/
 void	affChar(double value);

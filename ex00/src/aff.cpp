@@ -6,7 +6,7 @@
 /*   By: ldepenne <ldepenne@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 13:45:11 by ldepenne          #+#    #+#             */
-/*   Updated: 2026/10/14 16:59:14 by ldepenne         ###   ########.fr       */
+/*   Updated: 2026/10/15 20:05:38 by ldepenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,33 +24,31 @@ void	affChar(double value) {
 
 void	affInt(double value) {
 	std::cout << "int: ";
-	if ((value > std::numeric_limits<int>::max()
-		&& value < std::numeric_limits<int>::min())
-		||(value == std::numeric_limits<float>::max()))
-		std::cout << "impossible" << std::endl; //attention float max marche pas, ça overflow le int
+	if ((value > std::numeric_limits<int>::max() || value < std::numeric_limits<int>::min())
+		|| std::isnan(value) || std::isinf(value))
+		std::cout << "impossible" << std::endl;
 	else
 		std::cout << static_cast<int>(value) << std::endl;
 }
 
 void	affFloat(double value) {
 	std::cout << "float: ";
-	if (value > std::numeric_limits<float>::max()
-		&& value < std::numeric_limits<float>::min())
-		{
-			std::cout << "impossible" << std::endl;
-			return ;
-		}
 	float	f;
 
 	f = static_cast<float>(value);
+	if (std::isinf(value) && value > 0)
+		std::cout << '+';
 	std::cout << f;
-	if (f == static_cast<int>(f)) // verif si pas inf
+	if (f == static_cast<int>(f))
 		std::cout << ".0";
 	std::cout << "f" << std::endl;
 }
 
 void	affDouble(double value) {
-	std::cout << "double: " << value << std::endl;
+	std::cout << "double: ";
+	if (std::isinf(value) && value > 0)
+		std::cout << '+';
+	std::cout << value << std::endl;
 }
 
 void	affError() {

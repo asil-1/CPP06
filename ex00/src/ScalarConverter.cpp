@@ -6,7 +6,7 @@
 /*   By: ldepenne <ldepenne@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 11:57:52 by ldepenne          #+#    #+#             */
-/*   Updated: 2026/10/14 16:54:14 by ldepenne         ###   ########.fr       */
+/*   Updated: 2026/10/15 18:59:41 by ldepenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ ScalarConverter::~ScalarConverter() {}
 //ne pas afficher les char < 31 || > 126 :> std::isprint(char)
 
 void	ScalarConverter::convert(const std::string& literal) {
-	if (literal.empty() || !(isChar(literal) || isValidNnumber(literal)
+	if (literal.empty() || !(isChar(literal) || isValidNumber(literal)
 		|| isNan(literal) || isInf(literal)))
 		{
 			affError();

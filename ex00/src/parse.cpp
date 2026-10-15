@@ -6,7 +6,7 @@
 /*   By: ldepenne <ldepenne@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 10:28:49 by ldepenne          #+#    #+#             */
-/*   Updated: 2026/10/14 16:47:17 by ldepenne         ###   ########.fr       */
+/*   Updated: 2026/10/15 19:21:21 by ldepenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ bool	isValidNumber(const std::string& s) {
 	if (s[i] == '-')
 		i++;
 	for (; s[i]; i++) {
-		if (s[i] == 'e' && s[i+1] == '+')
+		if (s[i] == 'e' && (s[i+1] == '+' || s[i+1] == '-'))
 		{
 			i += 2;
 			power++;
