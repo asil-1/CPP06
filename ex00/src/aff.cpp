@@ -6,7 +6,7 @@
 /*   By: ldepenne <ldepenne@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 13:45:11 by ldepenne          #+#    #+#             */
-/*   Updated: 2026/10/15 20:05:38 by ldepenne         ###   ########.fr       */
+/*   Updated: 2026/10/16 22:27:16 by ldepenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,10 @@ void	affChar(double value) {
 
 void	affInt(double value) {
 	std::cout << "int: ";
+
+	float f = static_cast<float>(value);
 	if ((value > std::numeric_limits<int>::max() || value < std::numeric_limits<int>::min())
-		|| std::isnan(value) || std::isinf(value))
+		|| std::isnan(f) || std::isinf(f))
 		std::cout << "impossible" << std::endl;
 	else
 		std::cout << static_cast<int>(value) << std::endl;
@@ -36,6 +38,13 @@ void	affFloat(double value) {
 	float	f;
 
 	f = static_cast<float>(value);
+	if (((value > std::numeric_limits<float>::max() || value < -std::numeric_limits<float>::max())
+		|| (value < std::numeric_limits<float>::min() && value > -std::numeric_limits<float>::min()))
+		&& !std::isnan(f) && !std::isinf(f) && value != 0)
+	{
+		std::cout << "impossible" << std::endl;
+		return ;
+	}
 	if (std::isinf(value) && value > 0)
 		std::cout << '+';
 	std::cout << f;

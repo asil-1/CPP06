@@ -6,7 +6,7 @@
 /*   By: ldepenne <ldepenne@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 11:53:54 by ldepenne          #+#    #+#             */
-/*   Updated: 2026/10/15 18:59:31 by ldepenne         ###   ########.fr       */
+/*   Updated: 2026/10/16 22:19:59 by ldepenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 #include <cctype>
 #include <limits>
 #include <cmath>
+#include <cerrno>
 
 class	ScalarConverter {
 	public:
