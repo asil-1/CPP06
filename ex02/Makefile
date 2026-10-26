@@ -11,9 +11,6 @@ SRC_DIR		:= src/
 
 SRC			:=	main.cpp\
 				Base.cpp\
-# 				A.cpp\
-# 				B.cpp\
-# 				C.cpp
 
 OBJ			:=	$(SRC:%.cpp=$(BUILD_DIR)%.o)
 DEPS		:=	$(SRC:%.cpp=$(BUILD_DIR)%.d)

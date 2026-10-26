@@ -6,7 +6,7 @@
 /*   By: ldepenne <ldepenne@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/26 18:38:15 by ldepenne          #+#    #+#             */
-/*   Updated: 2026/10/26 18:39:48 by ldepenne         ###   ########.fr       */
+/*   Updated: 2026/10/26 19:22:12 by ldepenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,6 @@
 
 # include "Base.hpp"
 
-class	A : public Base {
-	public:
-		A();
-		~A();
-};
+class	A : public Base {};
 
 #endif

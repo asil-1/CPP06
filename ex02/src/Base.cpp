@@ -6,12 +6,11 @@
 /*   By: ldepenne <ldepenne@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/26 18:35:48 by ldepenne          #+#    #+#             */
-/*   Updated: 2026/10/26 18:37:53 by ldepenne         ###   ########.fr       */
+/*   Updated: 2026/10/26 20:17:36 by ldepenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <Base.hpp>
 
-Base::Base() {};
-
 Base::~Base() {};
+
