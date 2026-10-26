@@ -1,5 +1,5 @@
 #Makefile____________________
-NAME		:=	Serialization
+NAME		:=	Serializer
 INCLUDE		:=	include/
 
 CXX			:=	c++
@@ -10,10 +10,10 @@ BUILD_DIR	:=	obj/
 SRC_DIR		:=	src/
 
 SRC			:=	main.cpp\
-				Serialization.cpp
+				Serializer.cpp
 
-OBJ			:=	$(SRC%.cpp = $(BUILD_DIR)%.o)
-DEPS		:=	$(SRC%.cpp = $(BUILD_DIR)%.d)
+OBJ			:=	$(SRC:%.cpp=$(BUILD_DIR)%.o)
+DEPS		:=	$(SRC:%.cpp=$(BUILD_DIR)%.d)
 OBJ_DIR		:=	$(sort $(dir $(OBJ)))
 
 #Color_______________________
