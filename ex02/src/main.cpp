@@ -6,7 +6,7 @@
 /*   By: ldepenne <ldepenne@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/26 18:27:10 by ldepenne          #+#    #+#             */
-/*   Updated: 2026/10/26 20:24:44 by ldepenne         ###   ########.fr       */
+/*   Updated: 2026/10/27 14:11:20 by ldepenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,10 @@ void	identify(Base *p) {
 		std::cout << "A" << std::endl;
 	else if (dynamic_cast<B*>(p) != NULL)
 		std::cout << "B" << std::endl;
-	else
+	else if (dynamic_cast<C*>(p) != NULL)
 		std::cout << "C" << std::endl;
+	else
+		std::cout << "The type is unidentify" << std::endl;
 	return;
 }
 
